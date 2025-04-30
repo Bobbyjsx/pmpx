@@ -8,7 +8,7 @@
   "scripts": {
     "version": "changeset version",
     "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
-    "changeset:release": "changeset publish --access public",
+    "changeset:release": "changeset publish",
     "changeset:gen": "npx changeset"
   },
   "keywords": [
