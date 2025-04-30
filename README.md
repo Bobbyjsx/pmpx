@@ -16,21 +16,32 @@ npm install -g pmpx
 ## Usage
 
 ```bash
-pmpx add react
-pmpx install
-pmpx run dev
+pmpx add react        # Equivalent to npm/yarn/pnpm add react
+pmpx install          # Equivalent to npm/yarn/pnpm install
+pmpx run dev          # Equivalent to npm/yarn/pnpm run dev
 ```
+
+## How It Works
+
+pmpx automatically detects your project's package manager by checking for:
+- `pnpm-lock.yaml` → uses pnpm
+- `yarn.lock` → uses yarn
+- `package-lock.json` → uses npm
+
+If no lockfile is found, it uses the configured default or falls back to npm.
 
 ## Configuration
 
 You can configure a default package manager to be used when no lockfile is detected:
 
 ```bash
-pmpx pmpx-config set pm pnpm
-pmpx pmpx-config get pm
+pmpx pmpx-config set pm pnpm   # Set default package manager to pnpm
+pmpx pmpx-config get pm        # Check current default package manager
 ```
 
 ## Help
+
+For a full list of commands and options:
 
 ```bash
 pmpx help
@@ -39,3 +50,7 @@ pmpx help
 ## Documentation
 - [Release Guide](docs/RELEASING.md)
 - [Contributing Guide](docs/CONTRIBUTING.md)
+
+## License
+
+MIT © [Godswill Ezeala](https://github.com/Bobbyjsx)
