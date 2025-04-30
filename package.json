@@ -3,12 +3,12 @@
   "version": "1.1.1",
   "description": "Smart package manager proxy CLI",
   "bin": {
-    "pmpx": "./bin/index.js"
+    "pmpx": "bin/index.js"
   },
   "scripts": {
     "version": "changeset version",
     "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
-    "changeset:release": "changeset publish",
+    "changeset:release": "changeset publish --access public",
     "changeset:gen": "npx changeset"
   },
   "keywords": [
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bobbyjsx/pmpx"
+    "url": "git+https://github.com/Bobbyjsx/pmpx.git"
   },
   "bugs": {
     "url": "https://github.com/Bobbyjsx/pmpx/issues"
