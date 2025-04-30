@@ -1,13 +1,13 @@
 {
   "name": "pmpx",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "Smart package manager proxy CLI",
   "bin": {
     "pmpx": "./bin/index.js"
   },
   "scripts": {
     "version": "changeset version",
-    "postversion": "git add . && git commit -m 'chore(release): version bump' && git push",
+    "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
     "changeset:release": "changeset publish",
     "changeset:gen": "npx changeset"
   },
