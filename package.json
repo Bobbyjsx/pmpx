@@ -1,9 +1,16 @@
 {
   "name": "pmpx",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Smart package manager proxy CLI",
   "bin": {
     "pmpx": "./bin/index.js"
+  },
+  "scripts": {
+    "changeset:gen": "npx changeset",
+    "changeset:release": "changeset publish",
+    "release:minor": "changeset version --type=minor && npm version && git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
+    "release:major": "changeset version --type=major && npm version && git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
+    "release:patch": "changeset version --type=patch && npm version && git add . && git commit -m 'chore(release): version bump' && git push --follow-tags"
   },
   "keywords": [
     "cli",
@@ -15,6 +22,15 @@
   ],
   "author": "Godswill Ezeala",
   "license": "MIT",
-  "dependencies": {},
-  "packageManager": "yarn@4.6.0+sha256.eaf1eeabc164a44ca0b65dbdccd54af7e55f3ff9294b3ff318d5aaec92f2b20b"
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bobbyjsx/pmpx"
+  },
+  "bugs": {
+    "url": "https://github.com/Bobbyjsx/pmpx/issues"
+  },
+  "homepage": "https://github.com/Bobbyjsx/pmpx#readme"
 }
