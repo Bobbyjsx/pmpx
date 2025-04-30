@@ -1,0 +1,20 @@
+{
+  "name": "pmpx",
+  "version": "1.0.1",
+  "description": "Smart package manager proxy CLI",
+  "bin": {
+    "pmpx": "./bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "npm",
+    "yarn",
+    "pnpm",
+    "proxy",
+    "developer-tools"
+  ],
+  "author": "Godswill Ezeala",
+  "license": "MIT",
+  "dependencies": {},
+  "packageManager": "yarn@4.6.0+sha256.eaf1eeabc164a44ca0b65dbdccd54af7e55f3ff9294b3ff318d5aaec92f2b20b"
+}
