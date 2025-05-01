@@ -78,6 +78,8 @@ For a full list of commands and options:
 ```bash
 pmpx help
 ```
+## Fun
+Discover a delightful animation by running `pmpx anim`! Give it a try and brighten your day!
 
 ## Documentation
 - [Release Guide](docs/RELEASING.md)
