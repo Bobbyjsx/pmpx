@@ -7,16 +7,16 @@ const args = process.argv.slice(2);
 const command = args[0];
 
 switch (command) {
-  case "help":
-    showHelp();
-    break;
-  case "pmpx-config":
-    runConfigCommand(args.slice(1));
-    break;
-  case "anim":
-    showAnimation();
-    break;
-  default:
-    runProxyCommand(args);
-    break;
+   case "help":
+      showHelp();
+      break;
+   case "pmpx-config":
+      runConfigCommand(args.slice(1));
+      break;
+   case "anim":
+      showAnimation();
+      break;
+   default:
+      runProxyCommand(args);
+      break;
 }
