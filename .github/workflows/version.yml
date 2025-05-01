@@ -18,6 +18,11 @@ jobs:
 
       - run: npm ci
 
+      - name: Configure Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Bump version and push tag
         run: npm run version
         env:
