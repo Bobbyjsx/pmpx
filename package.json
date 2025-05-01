@@ -6,7 +6,8 @@
       "pmpx": "bin/index.js"
    },
    "scripts": {
-      "build": "tsc",
+      "clean": "rm -rf dist",
+      "build": "npm run clean && tsc",
       "start": "ts-node src/index.ts",
       "prepublishOnly": "npm run build",
       "version": "changeset version",
