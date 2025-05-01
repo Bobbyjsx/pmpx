@@ -1,6 +1,6 @@
 {
    "name": "pmpx",
-   "version": "2.0.0",
+   "version": "2.0.1",
    "description": "Smart package manager proxy CLI",
    "bin": {
       "pmpx": "bin/index.js"
@@ -17,7 +17,14 @@
       "lint": "biome check .",
       "format": "biome format . --write"
    },
-   "keywords": ["cli", "npm", "yarn", "pnpm", "proxy", "developer-tools"],
+   "keywords": [
+      "cli",
+      "npm",
+      "yarn",
+      "pnpm",
+      "proxy",
+      "developer-tools"
+   ],
    "author": "Godswill Ezeala",
    "license": "MIT",
    "devDependencies": {

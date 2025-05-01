@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.1
+
+### Patch Changes
+
+- 5da585d: Trigger publish workflow from version workflow and publish with public scope
+
 ## 2.0.0
 
 ### Major Changes
