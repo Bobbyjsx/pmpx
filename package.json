@@ -1,35 +1,43 @@
 {
-  "name": "pmpx",
-  "version": "1.1.1",
-  "description": "Smart package manager proxy CLI",
-  "bin": {
-    "pmpx": "bin/index.js"
-  },
-  "scripts": {
-    "version": "changeset version",
-    "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
-    "changeset:release": "changeset publish --access public",
-    "changeset:gen": "npx changeset"
-  },
-  "keywords": [
-    "cli",
-    "npm",
-    "yarn",
-    "pnpm",
-    "proxy",
-    "developer-tools"
-  ],
-  "author": "Godswill Ezeala",
-  "license": "MIT",
-  "devDependencies": {
-    "@changesets/cli": "^2.29.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bobbyjsx/pmpx.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Bobbyjsx/pmpx/issues"
-  },
-  "homepage": "https://github.com/Bobbyjsx/pmpx#readme"
+   "name": "pmpx",
+   "version": "1.1.1",
+   "description": "Smart package manager proxy CLI",
+   "bin": {
+      "pmpx": "bin/index.js"
+   },
+   "scripts": {
+      "build": "tsc",
+      "start": "ts-node src/index.ts",
+      "prepublishOnly": "npm run build",
+      "version": "changeset version",
+      "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
+      "changeset:release": "changeset publish --access public",
+      "changeset:gen": "npx changeset",
+      "prepare": "husky",
+      "lint": "biome check .",
+      "format": "biome format . --write"
+   },
+   "keywords": ["cli", "npm", "yarn", "pnpm", "proxy", "developer-tools"],
+   "author": "Godswill Ezeala",
+   "license": "MIT",
+   "devDependencies": {
+      "@biomejs/biome": "^1.9.4",
+      "@changesets/cli": "^2.29.2",
+      "@types/chalk-animation": "^1.6.3",
+      "@types/node": "^22.15.3",
+      "husky": "^9.1.7",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.8.3"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Bobbyjsx/pmpx.git"
+   },
+   "bugs": {
+      "url": "https://github.com/Bobbyjsx/pmpx/issues"
+   },
+   "homepage": "https://github.com/Bobbyjsx/pmpx#readme",
+   "dependencies": {
+      "chalk-animation": "^2.0.3"
+   }
 }

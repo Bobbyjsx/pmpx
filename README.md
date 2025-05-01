@@ -30,6 +30,18 @@ pmpx automatically detects your project's package manager by checking for:
 
 If no lockfile is found, it uses the configured default or falls back to npm.
 
+## Project Structure
+
+The project is organized into a modular structure:
+```
+├── bin/                # Entry point for the CLI
+├── dist/               # Compiled output files
+├── docs/               # Documentation files
+├── src/                # Source files (TypeScript)
+│   ├── commands/       # CLI commands
+│   └── utils/          # Utility functions
+```
+
 ## Configuration
 
 You can configure a default package manager to be used when no lockfile is detected:
@@ -39,6 +51,26 @@ pmpx pmpx-config set pm pnpm   # Set default package manager to pnpm
 pmpx pmpx-config get pm        # Check current default package manager
 ```
 
+## Development
+
+pmpx is built with TypeScript and uses modern development tools:
+
+```bash
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Run linting
+npm run lint
+
+# Format code
+npm run format
+```
+
+For more details on contributing, see the [Contributing Guide](docs/CONTRIBUTING.md).
+
 ## Help
 
 For a full list of commands and options:
@@ -46,6 +78,8 @@ For a full list of commands and options:
 ```bash
 pmpx help
 ```
+## Fun
+Discover a delightful animation by running `pmpx anim`! Give it a try and brighten your day!
 
 ## Documentation
 - [Release Guide](docs/RELEASING.md)

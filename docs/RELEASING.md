@@ -1,12 +1,18 @@
 
 # 📦 Releasing a New Version of pmpx
 
-This guide explains how to version and publish a new release of `pmpx`.
+This guide explains how to version and publish a new release of `pmpx` using the automated workflow with changesets.
 
 ## 1. Make Your Code Changes
 Ensure your feature, fix, or enhancement is committed to your branch.
 
-## 2. Generate a Changeset
+## 2. Build the Project
+Before proceeding, make sure the TypeScript code is compiled:
+```bash
+npm run build
+```
+
+## 3. Generate a Changeset
 Run:
 ```bash
 npm run changeset:gen
@@ -14,36 +20,35 @@ npm run changeset:gen
 Follow the prompts to:
 - Select the packages that have changed
 - Choose the appropriate bump type (patch, minor, major)
-- Write a brief description of the changes
+- Write a detailed description of the changes
 
 This will create a new file in the `.changeset` directory.
 
-## 3. Version and Publish
+## 4. Automated Release Process
 
-When you're ready to release:
+The project uses GitHub Actions for automated versioning and publishing:
 
-1. **Version the package**:
-   ```bash
-   npm run version
-   ```
-   This will:
-   - Update the version in package.json based on your changesets
-   - Update the CHANGELOG.md file
-   - Remove the changeset files
-
-2. **Commit and push**:
-   The `postversion` script will automatically:
+1. **Push your changes with the changeset**:
    ```bash
    git add .
-   git commit -m 'chore(release): version bump'
+   git commit -m 'feat: add new feature with changeset'
    git push
    ```
 
-3. **Publish to npm**:
-   ```bash
-   npm run changeset:release
-   ```
-   This will publish the new version to npm.
+2. **Automated Versioning**:
+   When changes are pushed to the `main` branch, the `version.yml` workflow will:
+   - Update the version in package.json based on your changesets
+   - Update the CHANGELOG.md file
+   - Remove the changeset files
+   - Commit these changes and create a git tag
 
-## 4. Create a GitHub Release (Optional)
-After publishing, you may want to create a GitHub release with the same version number and release notes from your CHANGELOG.md.
+3. **Automated Publishing and Release**:
+   When a new tag is pushed (by the version workflow), the `publish.yml` workflow will:
+   - Build the project
+   - Publish the new version to npm
+   - Create a GitHub release
+
+After the release is complete:
+- Check that the package is available on npm
+- Verify the GitHub release was created
+- Ensure the documentation reflects the new version
