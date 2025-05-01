@@ -9,7 +9,7 @@
       "build": "tsc",
       "start": "ts-node src/index.ts",
       "prepublishOnly": "npm run build",
-      "version": "changeset version",
+      "version": "changeset version && git tag v$(node -p \"require('./package.json').version\") && git push origin --tags",
       "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
       "changeset:release": "changeset publish --access public",
       "changeset:gen": "npx changeset",
