@@ -1,5 +1,5 @@
 export function showHelp() {
-  console.log(`pmpx - Smart Package Manager Proxy
+   console.log(`pmpx - Smart Package Manager Proxy
 
 Usage:
   pmpx <command> [...args]         Run any command using the detected package manager

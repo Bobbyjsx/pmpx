@@ -15,16 +15,9 @@
       "changeset:gen": "npx changeset",
       "prepare": "husky",
       "lint": "biome check .",
-      "format": "biome format . --write"
+      "format": "biome check . --write"
    },
-   "keywords": [
-      "cli",
-      "npm",
-      "yarn",
-      "pnpm",
-      "proxy",
-      "developer-tools"
-   ],
+   "keywords": ["cli", "npm", "yarn", "pnpm", "proxy", "developer-tools"],
    "author": "Godswill Ezeala",
    "license": "MIT",
    "devDependencies": {
@@ -43,8 +36,5 @@
       "url": "https://github.com/Bobbyjsx/pmpx/issues"
    },
    "homepage": "https://github.com/Bobbyjsx/pmpx#readme",
-   "files": [
-      "dist",
-      "bin"
-   ]
+   "files": ["dist", "bin"]
 }
