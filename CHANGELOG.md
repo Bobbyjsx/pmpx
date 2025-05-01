@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.2
+
+### Patch Changes
+
+- 3105b8f: do not ignore dist
+
 ## 2.0.1
 
 ### Patch Changes
