@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.5
+
+### Patch Changes
+
+- 1bcfca6: Remove anim command as it breaks the proxy
+
 ## 2.0.4
 
 ### Patch Changes

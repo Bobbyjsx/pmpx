@@ -1,6 +1,6 @@
 {
    "name": "pmpx",
-   "version": "2.0.4",
+   "version": "2.0.5",
    "description": "Smart package manager proxy CLI",
    "bin": {
       "pmpx": "bin/index.js"
