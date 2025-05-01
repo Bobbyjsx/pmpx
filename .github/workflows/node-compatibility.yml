@@ -1,0 +1,34 @@
+name: Test CLI across Node versions and OS
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [16, 18, 20]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install pmpx
+        run: npm install -g pmpx
+        
+      - name: Install dependencies
+        run: pmpx ci
+
+      - name: Build
+        run: pmpx run build
+        
+      - name: Lint
+        run: pmpx run lint
