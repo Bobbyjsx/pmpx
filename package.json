@@ -30,7 +30,6 @@
    "devDependencies": {
       "@biomejs/biome": "^1.9.4",
       "@changesets/cli": "^2.29.2",
-      "@types/chalk-animation": "^1.6.3",
       "@types/node": "^22.15.3",
       "husky": "^9.1.7",
       "ts-node": "^10.9.2",
@@ -44,9 +43,6 @@
       "url": "https://github.com/Bobbyjsx/pmpx/issues"
    },
    "homepage": "https://github.com/Bobbyjsx/pmpx#readme",
-   "dependencies": {
-      "chalk-animation": "^2.0.3"
-   },
    "files": [
       "dist",
       "bin"
