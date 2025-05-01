@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.4
+
+### Patch Changes
+
+- 06ba527: fix animation
+
 ## 2.0.2
 
 ### Patch Changes
