@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-const { execSync } = require('child_process');
-const { detectPM } = require('../utils/detectPM');
-const { runpmpxConfig } = require('../utils/pmpxConfigHandler');
+const { execSync } = require("child_process");
+const { detectPM } = require("../utils/detectPM");
+const { runpmpxConfig } = require("../utils/pmpxConfigHandler");
+const chalkAnimation = require("chalk-animation");
 
 const args = process.argv.slice(2);
 
 // Help message
-if (args[0] === 'help') {
+if (args[0] === "help") {
   console.log(`pmpx - Smart Package Manager Proxy
 
 Usage:
@@ -32,16 +33,27 @@ If none is found, and no config is set, it defaults to npm.
 }
 
 // Config handler
-if (args[0] === 'pmpx-config') {
+if (args[0] === "pmpx-config") {
   runpmpxConfig(args.slice(1));
   process.exit(0);
 }
 
+if (args[0] === "anim") {
+  const animation = chalkAnimation.rainbow("✨ pmpx: Package Manager Proxy ✨");
+
+  setTimeout(() => {
+    animation.stop(); // Stop after 4 seconds
+    console.log("\nBack to work now 😄");
+  }, 4000);
+
+  return;
+}
+
 // Proxy command
 const pm = detectPM();
-const command = `${pm} ${args.join(' ')}`;
+const command = `${pm} ${args.join(" ")}`;
 try {
-  execSync(command, { stdio: 'inherit' });
+  execSync(command, { stdio: "inherit" });
 } catch (err) {
   console.error(`Failed to execute: ${command}`);
   process.exit(1);
