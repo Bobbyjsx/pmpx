@@ -1,10 +1,10 @@
 export async function showAnimation() {
-  const chalkAnimation = await import("chalk-animation");
+   const chalkAnimation = await import("chalk-animation");
 
-  const animation = chalkAnimation.rainbow("✨ pmpx: Package Manager Proxy ✨");
+   const animation = chalkAnimation.rainbow("✨ pmpx: Package Manager Proxy ✨");
 
-  setTimeout(() => {
-    animation.stop();
-    console.log("\nBack to work now 😄");
-  }, 4000);
+   setTimeout(() => {
+      animation.stop();
+      console.log("\nBack to work now 😄");
+   }, 4000);
 }
