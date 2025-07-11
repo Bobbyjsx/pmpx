@@ -3,7 +3,7 @@ export function showHelp() {
 
 Usage:
   pmpx <command> [...args]         Run any command using the detected package manager
-  pmpx pmpx-config get <key>       Get stored config value (e.g. pm)
+  pmpx pmpx-config get <key>       Get stored config value (e.g.  pm)
   pmpx pmpx-config set <key> <val> Set config value (e.g. set pm yarn sets default package manager to yarn)
   pmpx help                        Show this message
 
