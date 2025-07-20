@@ -1,7 +1,12 @@
 name: Release and Publish
 
 on:
-  push:
+  workflow_run: # for git actions
+     workflows: ["Version and Tag"]
+     types:
+       - completed
+
+  push: # for manual tag pushes
     tags:
       - 'v*'
 
