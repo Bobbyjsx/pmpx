@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  test-on-node-versions:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -23,12 +23,12 @@ jobs:
 
       - name: Install pmpx
         run: npm install -g pmpx
-        
+
       - name: Install dependencies
         run: pmpx ci
 
       - name: Build
         run: pmpx run build
-        
+
       - name: Lint
         run: pmpx run lint

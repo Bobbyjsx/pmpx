@@ -40,7 +40,8 @@ The project uses GitHub Actions for automated versioning and publishing:
    - Update the version in package.json based on your changesets
    - Update the CHANGELOG.md file
    - Remove the changeset files
-   - Commit these changes and create a git tag
+   - Commit these changes
+   - Create a github tag for the version and push
 
 3. **Automated Publishing and Release**:
    When a new tag is pushed (by the version workflow), the `publish.yml` workflow will:

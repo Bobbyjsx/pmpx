@@ -31,6 +31,9 @@
          },
          "correctness": {
             "useExhaustiveDependencies": "warn"
+         },
+         "complexity": {
+            "noForEach": "off"
          }
       }
    },

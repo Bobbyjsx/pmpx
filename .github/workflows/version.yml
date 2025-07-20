@@ -6,7 +6,8 @@ on:
       - main
 
 jobs:
-  version:
+  version-and-tag:
+    needs: test-on-node-versions
     runs-on: ubuntu-latest
 
     steps:
@@ -36,11 +37,10 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Create and push version tag
         if: success()
         run: |
           VERSION=$(node -p "require('./package.json').version")
           git tag "v$VERSION"
           git push origin "v$VERSION"
-

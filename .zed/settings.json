@@ -6,7 +6,8 @@
          }
       }
    },
-   "language_servers": ["biome"],
+
+   "language_servers": ["...", "biome", "!eslint"],
    "code_actions_on_format": {
       "source.fixAll.biome": true,
       "source.organizeImports.biome": true
