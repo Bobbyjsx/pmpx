@@ -24,6 +24,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Bump version and push tag
-        run: npm run version
+        # run: npm run version
+        run: |
+          echo "Checking for pending changesets..."
+          if npx changeset version | grep 'No unreleased changesets'; then
+            echo "✅ No changesets to version. Skipping..."
+            exit 0
+          fi
+          echo "🚀 Changesets found. Running version script..."
+          npm run version
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
