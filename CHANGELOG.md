@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.7
+
+### Patch Changes
+
+- 0a39b33: Fix ci cd
+
 ## 2.0.6
 
 ### Patch Changes
