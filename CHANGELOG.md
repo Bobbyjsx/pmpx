@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.1.2
+
+### Patch Changes
+
+- 9f9e1c3: Fix CI to publish
+
 ## 2.1.1
 
 ### Patch Changes
