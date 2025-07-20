@@ -20,6 +20,7 @@ pids/
 # Build output
 build/
 out/
+dist/
 
 # Dependency directories
 jspm_packages/

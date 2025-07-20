@@ -1,5 +1,5 @@
-import { version } from "../../package.json";
+import { version } from '../../package.json';
 
 export const showPmpxVersion = (): void => {
-   console.log(`pmpx version: ${version}`);
+	console.log(`pmpx version: ${version}`);
 };

@@ -1,0 +1,88 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [["\u0000"], ["@*", "*"], ["../*"], ["./*"]]
+					}
+				},
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		},
+		"enabled": true
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
+	"formatter": {
+		"bracketSpacing": true,
+		"enabled": true,
+		"formatWithErrors": false,
+		"lineEnding": "lf",
+		"useEditorconfig": true
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+			"jsxQuoteStyle": "single",
+			"quoteStyle": "single",
+			"semicolons": "always",
+			"trailingCommas": "es5"
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"expand": "auto",
+			"trailingCommas": "none"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"a11y": {
+				"noAutofocus": "off",
+				"noStaticElementInteractions": "off",
+				"noSvgWithoutTitle": "off",
+				"useKeyWithClickEvents": "off"
+			},
+			"correctness": {
+				"noUnusedImports": "error",
+				"useExhaustiveDependencies": "warn"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"options": {
+						"attributes": ["classList"],
+						"functions": ["clsx", "cva", "tw", "tw.*"]
+					}
+				}
+			},
+			"recommended": true,
+			"security": {
+				"noDangerouslySetInnerHtml": "info"
+			},
+			"style": {
+				"noUnusedTemplateLiteral": "error",
+				"useTemplate": "warn"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "warn",
+				"noExplicitAny": "off",
+				"noThenProperty": "off"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "develop",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
+}
