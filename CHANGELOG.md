@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.1.0
+
+### Minor Changes
+
+- 65fb315: Minor mods to ci
+
 ## 2.0.7
 
 ### Patch Changes
