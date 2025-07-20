@@ -1,5 +1,11 @@
 # pmpx
 
+## 2.0.6
+
+### Patch Changes
+
+- 9c07ebd: Improved: detectPM now supports Python package managers:
+
 ## 2.0.5
 
 ### Patch Changes
