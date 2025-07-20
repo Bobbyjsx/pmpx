@@ -12,8 +12,8 @@ export function showHelp() {
          `${COMMANDS.PMPX_CONFIG} set <key> <val>`,
          "Set config value (e.g. set pm yarn sets default package manager to yarn)",
       ],
-      [COMMANDS.GET_VERSION_FULL, "Show currently installed pmpx version"],
-      [COMMANDS.GET_VERSION_SHORT, "Show currently installed pmpx version"],
+      [COMMANDS.GET_VERSION_FULL, "Show currently installed pmpx version (detailed)"],
+      [COMMANDS.GET_VERSION_SHORT, "Show currently installed pmpx version (short)"],
       [COMMANDS.HELP, "Show this message"],
    ];
 
