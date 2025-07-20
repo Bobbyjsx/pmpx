@@ -7,7 +7,6 @@ on:
 
 jobs:
   version-and-tag:
-    needs: test-on-node-versions
     runs-on: ubuntu-latest
 
     steps:

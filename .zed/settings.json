@@ -1,15 +1,23 @@
 {
-   "lsp": {
-      "biome": {
-         "settings": {
-            "config_path": "../biome.json"
-         }
-      }
-   },
-
-   "language_servers": ["...", "biome", "!eslint"],
-   "code_actions_on_format": {
-      "source.fixAll.biome": true,
-      "source.organizeImports.biome": true
-   }
+	"code_actions_on_format": {
+		"quickfix.biome": true,
+		"source.action.useSortedKeys.biome": true,
+		"source.fixAll.biome": true,
+		"source.organizeImports.biome": true,
+		"source.removeUnusedImports.biome": true
+	},
+	"format_on_save": "on",
+	"formatter": {
+		"language_server": {
+			"name": "biome"
+		}
+	},
+	"language_servers": ["...", "biome"],
+	"lsp": {
+		"biome": {
+			"settings": {
+				"config_path": "../biome.jsonc"
+			}
+		}
+	}
 }

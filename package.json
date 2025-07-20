@@ -1,41 +1,41 @@
 {
-   "name": "pmpx",
-   "version": "2.1.0",
-   "description": "Smart package manager proxy CLI",
-   "bin": {
-      "pmpx": "bin/index.js"
-   },
-   "scripts": {
-      "clean": "rm -rf dist",
-      "build": "npm run clean && tsc",
-      "start": "ts-node src/index.ts",
-      "prepublishOnly": "npm run build",
-      "version": "changeset version",
-      "postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
-      "changeset:release": "changeset publish --access public",
-      "changeset:gen": "npx changeset",
-      "prepare": "husky",
-      "lint": "biome check .",
-      "format": "biome check . --write"
-   },
-   "keywords": ["cli", "npm", "yarn", "pnpm", "proxy", "developer-tools"],
-   "author": "Godswill Ezeala",
-   "license": "MIT",
-   "devDependencies": {
-      "@biomejs/biome": "^1.9.4",
-      "@changesets/cli": "^2.29.2",
-      "@types/node": "^22.15.3",
-      "husky": "^9.1.7",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.8.3"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Bobbyjsx/pmpx.git"
-   },
-   "bugs": {
-      "url": "https://github.com/Bobbyjsx/pmpx/issues"
-   },
-   "homepage": "https://github.com/Bobbyjsx/pmpx#readme",
-   "files": ["dist", "bin"]
+	"author": "Godswill Ezeala",
+	"bin": {
+		"pmpx": "bin/index.js"
+	},
+	"bugs": {
+		"url": "https://github.com/Bobbyjsx/pmpx/issues"
+	},
+	"description": "Smart package manager proxy CLI",
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.2",
+		"@changesets/cli": "^2.29.2",
+		"@types/node": "^22.15.3",
+		"husky": "^9.1.7",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	},
+	"files": ["dist", "bin"],
+	"homepage": "https://github.com/Bobbyjsx/pmpx#readme",
+	"keywords": ["cli", "npm", "yarn", "pnpm", "proxy", "developer-tools"],
+	"license": "MIT",
+	"name": "pmpx",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Bobbyjsx/pmpx.git"
+	},
+	"scripts": {
+		"build": "npm run clean && tsc",
+		"changeset:gen": "npx changeset",
+		"changeset:release": "changeset publish --access public",
+		"clean": "rm -rf dist",
+		"format": "biome check . --write",
+		"lint": "biome check .",
+		"postversion": "git add . && git commit -m 'chore(release): version bump' && git push --follow-tags",
+		"prepare": "husky",
+		"prepublishOnly": "npm run build",
+		"start": "ts-node src/index.ts",
+		"version": "changeset version"
+	},
+	"version": "2.1.0"
 }
